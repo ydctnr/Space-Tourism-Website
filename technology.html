@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Space Tourism Website</title>
+
+        <link 
+        rel="icon" 
+        type="image/png" 
+        sizes="32x32" 
+        href="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/favicon-32x32.png?raw=true">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <img class="background" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/technology/background-technology-desktop.jpg?raw=true" alt="background">
+        <img class="tablet" src="starter-code\assets\technology\background-technology-tablet.jpg" alt="background">
+        <header>
+            <div class="heading">
+                <div class="logo">
+                    <img src="file:///C:/Users/ydcet/Desktop/space-tourism-website-main/starter-code/assets/shared/logo.svg" alt="logo">
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="home.html"><span>00</span>HOME</a></li>
+                        <li><a href="destination.html"><span>01</span>DESTINATION</a></li>
+                        <li><a href="crew.html"><span>02</span>CREW</a></li>
+                        <li><a class="technology" href="technology.html"><span>03</span>TECHNOLOGY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="picked">
+                <h4><span class="span">03</span>SPACE LAUNCH 101</h4>
+                <section class="landscape">
+                    <img class="vehicle " src="starter-code\assets\technology\image-launch-vehicle-landscape.jpg">
+                    <img class="spaceport hidden" src="starter-code\assets\technology\image-spaceport-landscape.jpg">
+                    <img class="capsule hidden" src="starter-code\assets\technology\image-space-capsule-landscape.jpg">
+                </section>
+                <div class="numbers">
+                    <button class="number vehicle" aria-label="Launch Vehicle">1</button>
+                    <button class="number spaceport" aria-label="Spaceport">2</button>
+                    <button class="number capsule" aria-label="Space Capsule">3</button>
+                </div>
+                <div class="terminology">
+                    <h5>THE TERMINOLOGY...</h5>
+                    <article class="vehicle">
+                        <h1>LAUNCH VEHICLE</h1>
+                        <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle 
+                            used to carry a payload from Earth's surface to space, usually to 
+                            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. 
+                            Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+                        </p>
+                    </article>
+                    <article class="spaceport hidden">
+                        <h1>SPACEPORT</h1>
+                        <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+                            by analogy to the seaport for ships or airport for aircraft. Based in the 
+                            famous Cape Canaveral, our spaceport is ideally situated to take advantage of 
+                            the Earth’s rotation for launch.
+                        </p>
+                    </article>
+                    <article class="capsule hidden">
+                        <h1>SPACE CAPSULE</h1>
+                        <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+                            capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+                            you'll spend your time during the flight. It includes a space gym, cinema, 
+                            and plenty of other activities to keep you entertained.
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <section class="pictures">
+                <img class="vehicle desktop" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/technology/image-launch-vehicle-portrait.jpg?raw=true">
+                <img class="spaceport desktop hidden" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/technology/image-spaceport-portrait.jpg?raw=true">
+                <img class="capsule desktop hidden" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/technology/image-space-capsule-portrait.jpg?raw=true">
+            </section>
+        </main>
+
+        <script>
+            const numberButtons = document.querySelectorAll('.numbers button');
+            const termElements = document.querySelectorAll('.terminology > article');
+            const termImages = document.querySelectorAll('.pictures > img');
+            const landImages = document.querySelectorAll('.landscape > img');
+
+            function toggleCrewElements(termInfo) {
+                termElements.forEach(element => {
+                    if (element.classList.contains(termInfo)) {
+                        element.classList.remove('hidden');
+                    } else { 
+                        element.classList.add('hidden');
+                    }
+                });
+            }
+
+
+            function toggleCrewImages(termInfo) {
+                termImages.forEach(image => {
+                    if (image.classList.contains(termInfo)) {
+                        image.classList.remove('hidden');
+                    } else {
+                        image.classList.add('hidden');
+                    }
+                });
+            }
+
+
+            function toggleCrewLandscape(termInfo) {
+                landImages.forEach(image => {
+                    if(image.classList.contains(termInfo)){
+                        image.classList.remove('hidden');
+                    } else {
+                        image.classList.add('hidden');
+                    }
+                })
+            }
+
+
+            numberButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const termInfo = button.classList[1];
+                    
+                    toggleCrewElements(termInfo);
+                    toggleCrewImages(termInfo);
+                    toggleCrewLandscape(termInfo);
+                });
+            });
+        </script>
+
+    </body>
+</html>

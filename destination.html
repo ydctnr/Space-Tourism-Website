@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Space Tourism Website</title>
+
+        <link 
+        rel="icon" 
+        type="image/png" 
+        sizes="32x32" 
+        href="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/favicon-32x32.png?raw=true">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <img class="background" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/background-destination-desktop.jpg?raw=true" alt="background">
+        <img class="tablet" src="starter-code\assets\destination\background-destination-tablet.jpg" alt="background">
+        <header>
+            <div class="heading">
+                <div class="logo">
+                    <img src="file:///C:/Users/ydcet/Desktop/space-tourism-website-main/starter-code/assets/shared/logo.svg" alt="logo">
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="home.html"><span>00</span>HOME</a></li>
+                        <li><a class="destination" href="destination.html"><span>01</span>DESTINATION</a></li>
+                        <li><a href="crew.html"><span>02</span>CREW</a></li>
+                        <li><a href="technology.html"><span>03</span>TECHNOLOGY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="picked">
+                <h4><span class="span">01</span> PICK YOUR DESTINATION</h4>
+                <img class="planet-image moon" src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/image-moon.png?raw=true" alt="Image of the Moon">
+            </section>
+            <section class="selection">
+                <div class="planet">
+                        <a class="moon" data-image-src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/image-moon.png?raw=true">MOON</a>
+                        <a class="mars" data-image-src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/image-mars.png?raw=true">MARS</a>
+                        <a class="europa" data-image-src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/image-europa.png?raw=true">EUROPA</a>
+                        <a class="titan" data-image-src="https://github.com/ydctnr/Space-Tourism-Website/blob/main/starter-code/assets/destination/image-titan.png?raw=true">TITAN</a>
+                </div>
+                <article class="article">
+                    <h1 class="moon">MOON</h1>
+                    <p class="moon">
+                        See our planet as you’ve never seen it before. 
+                        A perfect relaxing trip away to help regain perspective and 
+                        come back refreshed. While you’re there, take in some history 
+                        by visiting the Luna 2 and Apollo 11 landing sites.
+                    </p>
+                    <h1 class="hidden mars">MARS</h1>
+                    <p class="hidden mars">
+                       Don’t forget to pack your hiking boots. 
+                       You’ll need them to tackle Olympus Mons, 
+                       the tallest planetary mountain in our solar system. 
+                       It’s two and a half times the size of Everest!
+                    </p>
+                    <h1 class="hidden europa">EUROPA</h1>
+                    <p class="hidden europa">
+                        The smallest of the four Galilean moons orbiting Jupiter, 
+                        Europa is a winter lover’s dream. With an icy surface, 
+                        it’s perfect for a bit of ice skating, curling, hockey, 
+                        or simple relaxation in your snug wintery cabin.
+                    </p>
+                    <h1 class="hidden titan">TITAN</h1>
+                    <p class="hidden titan">
+                        The only moon known to have a dense atmosphere other than Earth, 
+                        Titan is a home away from home (just a few hundred degrees colder!). 
+                        As a bonus, you get striking views of the Rings of Saturn.
+                    </p>
+                </article>
+                <div class="information">
+                    <div>
+                        <h6>AVG. DISTANCE</h6>
+                        <p class="moon">384,400 KM</p>
+                        <p class="hidden mars">225 MIL. KM</p>
+                        <p class="hidden europa">628 MIL. KM</p>
+                        <p class="hidden titan">1.6 BIL. KM</p>
+                    </div>
+                    <div>
+                        <h6>EST. TRAVEL TIME</h6>
+                        <p class="moon">3 DAYS</p>
+                        <p class="hidden mars">9 MONTHS</p>
+                        <p class="hidden europa">3 YEARS</p>
+                        <p class="hidden titan">7 YEARS</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                showDestination("moon");     // Make moon elements default
+
+                const moonLink = document.querySelector(".planet .moon");
+                moonLink.style.borderBottom = "2.5px solid #FFFFFF";  //Default moon heading's border
+                moonLink.style.paddingBottom = "10px";
+
+
+                const planetLinks = document.querySelectorAll(".planet a");
+                planetLinks.forEach(link => {
+                    link.addEventListener("click", function(event) {
+                        event.preventDefault();
+
+                        const destination = this.classList[0];
+
+                        showDestination(destination);
+
+                        const planetImage = document.querySelector(".planet-image"); //Changing image of planet
+                        const newImageSrc = this.getAttribute("data-image-src");
+                        planetImage.src = newImageSrc;
+
+                        planetLinks.forEach(link => {
+                            link.style.borderBottom = "none";
+                        });
+                        this.style.borderBottom = "2.5px solid #FFFFFF";
+                        this.style.paddingBottom = "10px";
+                    });
+                });
+            });
+
+            function showDestination(destination) {
+                const allElements = document.querySelectorAll(".article h1, .article p, .information p");
+                allElements.forEach(element => {
+                    if (!element.classList.contains(destination)) {
+                        element.classList.add("hidden");
+                    } else {
+                        element.classList.remove("hidden");
+                    }
+                });
+            }
+        </script>
+
+    </body>
+</html>
