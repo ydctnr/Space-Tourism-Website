@@ -89,7 +89,7 @@ const Technology = () => {
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex flex-col lg:flex-row-reverse lg:gap-0 gap-24 text-center items-center pt-48 lg:pt-44'>
+        <div className='flex flex-col lg:flex-row-reverse lg:gap-0 gap-14 text-center items-center pt-48 lg:pt-44'>
 
           <div className='px-1 lg:px-0 '>
             <img
