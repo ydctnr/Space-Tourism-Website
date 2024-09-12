@@ -63,7 +63,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className='animate-bounceSmall hover:font-semibold flex w-[10em] h-[10em] md:w-[12em] md:h-[12em] lg:w-[10em] lg:h-[10em] justify-center bg-white rounded-full cursor-pointer absolute m-auto left-0 right-0 bottom-20 lg:left-1/2 lg:bottom-16'
+          <div className='animate-bounceSmall hover:font-semibold flex w-[10em] h-[10em] md:w-[12em] md:h-[12em] lg:w-[10em] lg:h-[10em] justify-center bg-white rounded-full cursor-pointer absolute m-auto left-0 right-0 bottom-5 lg:left-1/2 lg:bottom-16'
             onClick={() => navigate('/Destination')}>
             <button className="text-black text-xl font-playfair tracking-wider hover:font-semibold">EXPLORE</button>
           </div>
