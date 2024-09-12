@@ -92,7 +92,7 @@ const Crew = () => {
         <div className='flex flex-col md:flex-col-reverse lg:flex-row-reverse gap-9 text-center items-center pt-48 md:pt-56'>
           
           <div className='md:absolute md:bottom-0 lg:right-32'>
-            <img src={selectedMember.image} className='w-72 h-72 md:w-[30rem] md:h-[30rem] lg:w-72 lg:h-72' alt={selectedMember.name} />
+            <img src={selectedMember.image} className='w-60 h-60 md:w-[30rem] md:h-[30rem] lg:w-72 lg:h-72' alt={selectedMember.name} />
           </div>
           
           <div className='flex flex-col md:flex-col-reverse gap-10 lg:text-left lg:gap-8'>
