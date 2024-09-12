@@ -75,7 +75,7 @@ const Destination = () => {
 
         <div className='flex flex-col lg:flex-row gap-6 md:gap-12 lg:gap-24 text-center lg:text-left items-center pt-48 md:pt-56 lg:pt-44 lg:pl-44 lg:items-start'>
 
-          <div className='lg:pt-6'><img src={getPlanetImage()} className='w-48 h-48 md:w-56 md:h-56' alt={currentPlanet} /></div>
+          <div className='lg:pt-6'><img src={getPlanetImage()} className='w-40 h-40 md:w-56 md:h-56' alt={currentPlanet} /></div>
 
           <div className='grid grid-flow-row gap-5 md:gap-10 lg:gap-5'>
 

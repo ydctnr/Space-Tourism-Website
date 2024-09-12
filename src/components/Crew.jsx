@@ -109,7 +109,7 @@ const Crew = () => {
               </ul>
             </div>
 
-            <div className='grid grid-flow-row gap-3 tracking-widest pt-4 lg:pt-0 md:gap-5 lg:pl-[7rem]'>
+            <div className='grid grid-flow-row gap-3 tracking-widest  lg:pt-0 md:gap-5 lg:pl-[7rem]'>
               <h2 className='text-xl md:text-2xl font-roboto font-light text-gray-500 uppercase'>{selectedMember.role}</h2>
               <h1 className='text-3xl md-text-4xl font-playfair text-white -mt-2 uppercase'>{selectedMember.name}</h1>
               <p className='text-gray-400 text-xs font-normal tracking-wide leading-5 pt-2 px-12 md:px-48 lg:pl-0 lg:pr-[36rem]'>{selectedMember.description}</p>
