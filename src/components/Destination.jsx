@@ -73,11 +73,11 @@ const Destination = () => {
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex flex-col lg:flex-row gap-9 md:gap-12 lg:gap-24 text-center lg:text-left items-center pt-48 md:pt-56 lg:pt-44 lg:pl-44 lg:items-start'>
+        <div className='flex flex-col lg:flex-row gap-6 md:gap-12 lg:gap-24 text-center lg:text-left items-center pt-48 md:pt-56 lg:pt-44 lg:pl-44 lg:items-start'>
 
           <div className='lg:pt-6'><img src={getPlanetImage()} className='w-48 h-48 md:w-56 md:h-56' alt={currentPlanet} /></div>
 
-          <div className='grid grid-flow-row gap-8 md:gap-10 lg:gap-5'>
+          <div className='grid grid-flow-row gap-5 md:gap-10 lg:gap-5'>
 
           <div className='text-gray-400 tracking-wider text-sm font-normal font-roboto md:pl-16 lg:pl-0'>
               <ul className='cursor-pointer flex gap-10 md:gap-12 lg:gap-6'>
@@ -96,7 +96,7 @@ const Destination = () => {
               </ul>
             </div>
 
-            <div className='border-b-gray-500 border-b-[0.025em] w-80 md:w-[30rem] lg:w-[25rem] pb-6 md:pb-8 lg:pb-4'>
+            <div className='border-b-gray-500 border-b-[0.025em] w-80 md:w-[30rem] lg:w-[25rem] pb-6 md:pb-4'>
               <h1 className='text-white font-playfair tracking-widest text-6xl pb-4 md:pb-7 lg:pb-4 uppercase'>{currentPlanet}</h1>
               <p className='text-gray-400 text-xs font-normal tracking-wide leading-5 px-5 lg:px-0'>
                 {currentPlanet === 'Moon' && "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."}
@@ -106,7 +106,7 @@ const Destination = () => {
               </p>
             </div>
 
-            <div className='grid grid-flow-row lg:grid-flow-col gap-8 lg:gap-5'>
+            <div className='grid grid-flow-row lg:grid-flow-col gap-5 lg:gap-5'>
               <div>
                 <h6 className='text-gray-400 text-xs font-normal tracking-widest pb-1'>AVG. DISTANCE</h6>
                 <p className='tracking-widest text-white text-lg lg:text-xs font-playfair font-extralight'>
