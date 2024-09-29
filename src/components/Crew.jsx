@@ -82,23 +82,17 @@ const Crew = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className='container'>
-
-        <div className='absolute top-32 md:top-36 lg:top-32 pl-8 md:pl-11 lg:pl-0 lg:left-[7.5rem] flex flex-wrap gap-4 font-roboto tracking-wider text-lg'>
+        <div className='absolute top-[25%] max-lg:top-[15%] left-[12.5%] flex flex-wrap gap-4 font-barlow tracking-widest text-lg'>
           <span className='text-gray-500 font-extrabold'>02</span>
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex flex-col md:flex-col-reverse lg:flex-row-reverse gap-9 text-center items-center pt-48 md:pt-56'>
+        <div className='flex md:flex-col lg:flex-row max-lg:flex-col-reverse max-lg:gap-5 md:justify-between justify-center place-items-end max-lg:items-center min-h-screen md:pt-64 lg:pt-32 pt-12 lg:px-[12.5%] max-lg:px-[10%]'>
           
-          <div className='md:absolute md:bottom-0 lg:right-32'>
-            <img src={selectedMember.image} className='w-60 h-60 md:w-[30rem] md:h-[30rem] lg:w-72 lg:h-72' alt={selectedMember.name} />
-          </div>
-          
-          <div className='flex flex-col md:flex-col-reverse gap-10 lg:text-left lg:gap-8'>
+          <div className='flex flex-col md:flex-col-reverse xl:pb-10 max-lg:text-center max-lg:items-center'>
 
-            <div className='pt-4 md:pt-1 lg:pt-0 m-auto left-0 right-0 lg:ml-[7rem]'>
-              <ul className='flex flex-wrap gap-4 md:gap-6 cursor-pointer'>
+            <div className='py-7 xl:py-20'>
+              <ul className='flex flex-wrap gap-6 cursor-pointer'>
                 {crewMembers.map((member, index) => (
                   <li
                     key={index}
@@ -109,18 +103,21 @@ const Crew = () => {
               </ul>
             </div>
 
-            <div className='grid grid-flow-row gap-3 tracking-widest  lg:pt-0 md:gap-5 lg:pl-[7rem]'>
-              <h2 className='text-xl md:text-2xl font-roboto font-light text-gray-500 uppercase'>{selectedMember.role}</h2>
-              <h1 className='text-3xl md-text-4xl font-playfair text-white -mt-2 uppercase'>{selectedMember.name}</h1>
-              <p className='text-gray-400 text-xs font-normal tracking-wide leading-5 pt-2 px-12 md:px-48 lg:pl-0 lg:pr-[36rem]'>{selectedMember.description}</p>
+            <div className='grid grid-flow-row gap-6 tracking-widest'>
+              <h2 className='text-3xl font-barlow text-gray-500 uppercase'>{selectedMember.role}</h2>
+              <h1 className='text-4xl font-bellefair text-white uppercase'>{selectedMember.name}</h1>
+              <p className='text-gray-400 text-sm font-medium tracking-wide leading-6 mt-2 max-w-sm'>{selectedMember.description}</p>
             </div>
 
+          </div>
+
+          <div className='max-w-[30%] xl:max-w-md max-lg:max-w-[50%]'>
+            <img src={selectedMember.image} className='' alt={selectedMember.name} />
           </div>
 
         </div>
 
 
-      </div>
     </div>
   );
 };

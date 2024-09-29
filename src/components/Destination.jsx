@@ -68,19 +68,19 @@ const Destination = () => {
     >
       <div className='container'>
 
-        <div className='absolute top-32 md:top-36 lg:top-32 pl-8 md:pl-11 lg:pl-0 lg:left-[7.5rem] flex flex-wrap gap-4 font-roboto tracking-wider text-lg'>
+        <div className='absolute top-[20%] max-lg:top-[15%] left-[11.4%] flex flex-wrap gap-4 font-barlow tracking-widest text-lg'>
           <span className='text-gray-500 font-extrabold'>01</span>
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex flex-col lg:flex-row gap-6 md:gap-12 lg:gap-24 text-center lg:text-left items-center pt-48 md:pt-56 lg:pt-44 lg:pl-44 lg:items-start'>
+        <div className='flex flex-col lg:flex-row gap-5 lg:justify-between justify-center items-center max-lg:text-center min-h-screen pt-[25%] lg:pt-[15%] px-[15%]'>
 
-          <div className='lg:pt-6'><img src={getPlanetImage()} className='w-40 h-40 md:w-56 md:h-56' alt={currentPlanet} /></div>
+          <div className='max-lg:max-w-[50%] max-w-screen-md'><img src={getPlanetImage()} className='animate-spin' alt={currentPlanet} /></div>
 
-          <div className='grid grid-flow-row gap-5 md:gap-10 lg:gap-5'>
+          <div className='grid grid-flow-row gap-5'>
 
-          <div className='text-gray-400 tracking-wider text-sm font-normal font-roboto md:pl-16 lg:pl-0'>
-              <ul className='cursor-pointer flex gap-10 md:gap-12 lg:gap-6'>
+          <div className='text-gray-400 tracking-wider text-base font-semibold font-barlow max-lg:m-auto'>
+              <ul className='cursor-pointer flex gap-7'>
                 <li className={`pb-2 ${currentPlanet === 'Moon' ? 'border-b-2 border-white' : 'border-transparent'}`}>
                   <button onClick={() => setCurrentPlanet('Moon')} className="focus:outline-none">MOON</button>
                 </li>
@@ -96,9 +96,9 @@ const Destination = () => {
               </ul>
             </div>
 
-            <div className='border-b-gray-500 border-b-[0.025em] w-80 md:w-[30rem] lg:w-[25rem] pb-6 md:pb-4'>
-              <h1 className='text-white font-playfair tracking-widest text-6xl pb-4 md:pb-7 lg:pb-4 uppercase'>{currentPlanet}</h1>
-              <p className='text-gray-400 text-xs font-normal tracking-wide leading-5 px-5 lg:px-0'>
+            <div className='border-b-gray-500 border-b-[0.025em] pb-10'>
+              <h1 className='text-white font-bellefair tracking-widest text-7xl uppercase mt-5'>{currentPlanet}</h1>
+              <p className='text-gray-400 text-sm font-medium tracking-wide leading-6 max-w-sm mt-5'>
                 {currentPlanet === 'Moon' && "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."}
                 {currentPlanet === 'Mars' && " Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"}
                 {currentPlanet === 'Europa' && "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin."}
@@ -106,10 +106,10 @@ const Destination = () => {
               </p>
             </div>
 
-            <div className='grid grid-flow-row lg:grid-flow-col gap-5 lg:gap-5'>
+            <div className='grid grid-flow-row lg:grid-flow-col gap-5 lg:gap-5 mt-2'>
               <div>
-                <h6 className='text-gray-400 text-xs font-normal tracking-widest pb-1'>AVG. DISTANCE</h6>
-                <p className='tracking-widest text-white text-lg lg:text-xs font-playfair font-extralight'>
+                <h6 className='text-gray-400 text-xs font-medium tracking-widest pb-1'>AVG. DISTANCE</h6>
+                <p className='tracking-widest text-white font-light text-xl font-playfair mt-1'>
                   {currentPlanet === 'Moon' && '384,400 KM'}
                   {currentPlanet === 'Mars' && '225 MIL. KM'}
                   {currentPlanet === 'Europa' && '628 MIL. KM'}
@@ -117,8 +117,8 @@ const Destination = () => {
                 </p>
               </div>
               <div>
-                <h6 className='text-gray-400 text-xs font-normal tracking-widest pb-1'>EST. TRAVEL TIME</h6>
-                <p className='tracking-widest text-white text-lg lg:text-xs font-playfair font-extralight'>
+                <h6 className='text-gray-400 text-xs font-medium tracking-widest pb-1'>EST. TRAVEL TIME</h6>
+                <p className='tracking-widest text-white text-xl font-playfair font-light mt-1'>
                   {currentPlanet === 'Moon' && '3 DAYS'}
                   {currentPlanet === 'Mars' && '9 MONTHS'}
                   {currentPlanet === 'Europa' && '3 YEARS'}

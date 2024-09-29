@@ -15,17 +15,25 @@ export default {
           '0%': { backgroundPositionx: '-200% 0' },
           
         },
+        rotateY: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
+        },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         bounceSmall: 'bounceSmall 1.2s ease-in-out infinite',
         rotate: 'rotate 5s linear infinite',
+        rotateY: 'rotateY 1.5s linear infinite',
+        spin: 'spin 35s linear infinite',
       },
 
       fontFamily: {
-        playfair: ["Playfair Display", 'serif'],
-        merriweather: ["Merriweather", "serif"],
-        roboto: ["Roboto", "sans-serif"],
-        redhat: ["Red Hat Text", "sans-serif"]
+        barlow: ["Barlow", "sans-serif"],
+        bellefair: ["Bellefair", "serif"],
       },
       colors: {
         navbar: 'rgba(255,255,255,0.04)',
