@@ -66,9 +66,7 @@ const Destination = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className='container'>
-
-        <div className='absolute top-[20%] max-lg:top-[15%] left-[11.4%] flex flex-wrap gap-4 font-barlow tracking-widest text-lg'>
+        <div className='absolute top-[25%] max-lg:top-[15%] left-[12.5%] flex flex-wrap gap-4 font-barlow tracking-widest text-lg'>
           <span className='text-gray-500 font-extrabold'>01</span>
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
@@ -132,7 +130,6 @@ const Destination = () => {
         </div>
         
       </div>
-    </div>
   );
 };
 

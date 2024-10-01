@@ -19,11 +19,11 @@ const Nav = () => {
   const closeMenuOnClick = () => setOpen(false);
 
   return (
-    <div className='w-full fixed top-0 left-0 right-0'>
-      <div className='md:flex items-center justify-between py-10 md:pl-10 pl-7 pr-10 md:pr-0'>
+    <div className='w-full absolute top-0 left-0 right-0'>
+      <div className='md:flex items-center justify-between px-6 py-10 md:px-0 md:pl-10'>
 
-        <div className='flex items-center justify-between w-full md:w-auto'>
-          <img className='w-8 h-8' src={logo} alt="Logo" />
+        <div className='flex items-center justify-between'>
+          <img className='w-full h-auto max-lg:max-w-10 ' src={logo} alt="Logo" />
 
           <div 
             onClick={() => setOpen(!open)} 
@@ -35,10 +35,10 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className='lg:absolute lg:right-[35rem] lg:z-50 lg:w-[36%] lg:h-[0.031em] md:bg-gray-500'></div>
+        <div className='lg:absolute lg:right-[57%] xl:right-[50%] lg:z-50 lg:w-[31%] xl:w-[38%] lg:h-[0.031em] md:bg-gray-500'></div>
 
         <ul 
-           className={`absolute m-auto right-0 md:m-0 md:flex items-center mt-5 md:mt-0 pt-5 pb-1 md:pb-0 pl-7 pr-24 md:static bg-gray-900 md:bg-navbar md:opacity-[0.9] md:backdrop-blur-lg md:z-auto z-[-1] md:w-auto transition-all duration-500 ease-in-out transform ${
+           className={`absolute m-auto right-0 md:m-0 md:flex items-center mt-5 md:mt-0 pt-5 pb-1 md:pb-0 pl-7 pr-[15%] md:static bg-gray-900 md:bg-navbar md:opacity-[0.9] md:backdrop-blur-lg md:z-auto z-[-1] md:w-auto transition-all duration-500 ease-in-out transform ${
             open ? 'top-20 opacity-[4]' : 'top-[-490px] opacity-0'
           }`}
         >

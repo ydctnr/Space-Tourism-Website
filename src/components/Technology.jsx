@@ -83,8 +83,7 @@ const Technology = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className='container'>
-        <div className='absolute top-32 md:top-36 lg:top-32 pl-8 md:pl-11 lg:pl-0 lg:left-[7.5rem] flex flex-wrap gap-4 font-roboto tracking-wider text-lg'>
+        <div className='absolute top-[25%] max-lg:top-[15%] left-[12.5%] flex flex-wrap gap-4 font-barlow tracking-widest text-lg'>
           <span className='text-gray-500 font-extrabold'>03</span>
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
@@ -129,7 +128,6 @@ const Technology = () => {
         </div>
 
       </div>
-    </div>
   );
 };
 
