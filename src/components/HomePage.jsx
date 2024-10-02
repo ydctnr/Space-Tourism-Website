@@ -49,7 +49,7 @@ const HomePage = () => {
       }}
     >
 
-     <div className='flex flex-col lg:flex-row max-lg:gap-24 lg:justify-between justify-center place-items-end max-lg:items-center min-h-screen xl:py-36 py-12 md:px-[12.5%]'>
+     <div className='flex flex-col lg:flex-row max-lg:gap-24 lg:justify-between justify-center place-items-end max-lg:items-center min-h-screen xl:py-36 py-12 max-lg:py-16 md:px-[12.5%]'>
       
       <div className='flex flex-col justify-center max-lg:items-center max-lg:px-8'>
         <h4 className='text-gray-400 xl:text-2xl font-medium font-barlow tracking-[0.15rem]'>SO, YOU  WANT TO TRAVEL TO</h4>

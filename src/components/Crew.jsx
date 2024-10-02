@@ -87,7 +87,7 @@ const Crew = () => {
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex md:flex-col lg:flex-row max-lg:flex-col-reverse max-lg:gap-5 md:justify-between justify-center place-items-end max-lg:items-center min-h-screen md:pt-64 lg:pt-32 pt-12 lg:px-[12.5%] max-lg:px-[10%]'>
+        <div className='flex md:flex-col lg:flex-row max-lg:flex-col-reverse max-lg:gap-5 md:justify-between justify-center place-items-end max-lg:items-center min-h-screen md:pt-64 lg:pt-32 pt-20 lg:px-[12.5%] max-lg:px-[10%]'>
           
           <div className='flex flex-col md:flex-col-reverse xl:pb-10 max-lg:text-center max-lg:items-center'>
 

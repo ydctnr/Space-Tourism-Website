@@ -71,9 +71,9 @@ const Destination = () => {
           <h4 className='text-gray-200 font-light'>{typeEffect}</h4>
         </div>
 
-        <div className='flex flex-col lg:flex-row gap-5 lg:justify-between justify-center items-center max-lg:text-center min-h-screen pt-[25%] lg:pt-[15%] px-[15%]'>
+        <div className='flex flex-col lg:flex-row gap-5 lg:justify-between justify-center items-center max-lg:text-center min-h-screen pt-[35%] md:pt-[25%] lg:pt-[15%] px-[15%]'>
 
-          <div className='max-lg:max-w-[50%] max-w-screen-md'><img src={getPlanetImage()} className='animate-spin' alt={currentPlanet} /></div>
+          <div className='max-lg:max-w-[50%] lg:w-[35%] max-w-screen-md'><img src={getPlanetImage()} className='animate-spin' alt={currentPlanet} /></div>
 
           <div className='grid grid-flow-row gap-5'>
 
